@@ -96,7 +96,7 @@ function renderLivejournal_User( $text, $params, $parser )
     if($params['user'])
     {
     	if($Livejournal_User_Remote_Images==1)
-    		return ('<a rel="nofollow" href="http://users.livejournal.com/'.$params['user'].'/profile"><img src="http://p-stat.livejournal.com/img/userinfo.gif"></a>&nbsp;<b><a rel="nofollow" href="http://users.livejournal.com/'.$params['user'].'">'.$params['user'].'</a></b>');
+    		return ('<a rel="nofollow" href="http://users.livejournal.com/'. htmlspecialchars( $params['user'] ) .'/profile"><img src="http://p-stat.livejournal.com/img/userinfo.gif"></a>&nbsp;<b><a rel="nofollow" href="http://users.livejournal.com/'. htmlspecialchars( $params['user'] ) .'">'.$params['user'].'</a></b>');
     	else
     		return $parser->recursiveTagParse('[[Image:Livejournal_UserInfo.gif]]'."&nbsp;'''".'[http://users.livejournal.com/'.$params['user'].'/profile '.$params['user'].']'."'''");
     }
@@ -105,7 +105,7 @@ function renderLivejournal_User( $text, $params, $parser )
     elseif($params['community'])
     {
     	if($Livejournal_User_Remote_Images==1)
-    		return ('<a rel="nofollow" href="http://community.livejournal.com/'.$params['community'].'/profile"><img src="http://p-stat.livejournal.com/img/community.gif"></a>&nbsp;<b><a rel="nofollow" href="http://community.livejournal.com/'.$params['community'].'">'.$params['community'].'</a></b>');
+    		return ('<a rel="nofollow" href="http://community.livejournal.com/'. htmlspecialchars( $params['community'] ) .'/profile"><img src="http://p-stat.livejournal.com/img/community.gif"></a>&nbsp;<b><a rel="nofollow" href="http://community.livejournal.com/'. htmlspecialchars( $params['community'] ) .'">'.$params['community'].'</a></b>');
     	else
     		return $parser->recursiveTagParse('[[Image:Livejournal_CommunityInfo.gif]]'."&nbsp;'''".'[http://community.livejournal.com/'.$params['community'].'/profile '.$params['community'].']'."'''");
     }
@@ -113,4 +113,3 @@ function renderLivejournal_User( $text, $params, $parser )
 }
 
 
-?>
