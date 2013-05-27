@@ -2,7 +2,7 @@
 /*
  * Livejournal_User.php - A MediaWiki tag extension which adds support for injecting <lj user=""/> and <lj community=""/>  tags
  * @author Jehy
- * @version 0.2
+ * @version 0.2.1
  * @copyright Copyright (C) 2008-2012 Jehy
  * @license The MIT License - http://www.opensource.org/licenses/mit-license.php
  * -----------------------------------------------------------------------
@@ -21,7 +21,7 @@
  *     Once installed, you may utilize Livejournal_User by adding the <lj user/> and <lj community/> tags to articles:
  *          <lj user="jehy"/> and <lj community="yaoi_ru"/>
  * Version Notes:
- *     version 0.2
+ *     version 0.2.1
  * -----------------------------------------------------------------------
  * Copyright (c) 2012 Jehy
  *
@@ -58,7 +58,7 @@ $wgExtensionCredits['parserhook'][] = array(
 	'author' => 'Jehy http://jehy.ru/index.en.html',
 	'url' => 'http://jehy.ru/wiki-extensions.en.html',
     'description'=>'Adds cute tags (&lt;lj user=""/&gt; and &lt;lj community=""/&gt;) for linking to livejornal users and communities',
-    'version'=>'0.2'
+    'version'=>'0.2.1'
 );
 
 
